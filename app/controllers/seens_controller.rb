@@ -156,6 +156,7 @@ class SeensController < ApplicationController
       @seen.acondition = params[:seen][:accondition]
       @seen.comment    = params[:seen][:comment]
       @seen.evaluation = Seen::EVALUATION_STAR_ID
+      @seen.post_flag  = params[:seen][:post_flag]
     else
       @seen = Seen.new(params[:seen])
     end
